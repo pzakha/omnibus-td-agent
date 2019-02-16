@@ -13,8 +13,13 @@ else
   install_dir "#{default_root}/#{name}"
 end
 
-build_version   "3.3.0"
-build_iteration 1
+# Custom Delphix version & revision
+# build_version   "3.3.0"
+# build_iteration 1
+pkg_ver = ENV["PACKAGE_VERSION"]
+pkg_rev = ENV["PACKAGE_REVISION"]
+build_version "#{pkg_ver}"
+build_iteration "#{pkg_rev}"
 
 # creates required build directories
 dependency "preparation"
@@ -29,12 +34,16 @@ override :fluentd, :version => '5b80dd0d6256784963fe7b01181450268b481eb9' # v1.3
 # td-agent dependencies/components
 dependency "td-agent"
 dependency "td-agent-files"
-dependency "td"
+# comment below two, we don't need them
+#dependency "td"
 #dependency "td-agent-ui" # fluentd-ui doesn't work with ruby 2.4 because some gems depend on json 1.8
 dependency "td-agent-cleanup"
 
 # version manifest file
 dependency "version-manifest"
+
+# Add Delphix custom splunk-hec plugin
+dependency "splunk-hec"
 
 case ohai["os"]
 when "linux"
