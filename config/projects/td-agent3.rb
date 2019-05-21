@@ -13,7 +13,7 @@ else
   install_dir "#{default_root}/#{name}"
 end
 
-build_version   "3.4.0"
+build_version   "3.4.1"
 build_iteration 0
 # Custom Delphix version & revision
 pkg_ver = ENV["PACKAGE_VERSION"]
@@ -24,7 +24,7 @@ build_iteration "#{pkg_rev}"
 # creates required build directories
 dependency "preparation"
 
-override :ruby, :version => '2.4.5'
+override :ruby, :version => '2.4.6'
 override :zlib, :version => '1.2.11'
 override :jemalloc, :version => '4.5.0'
 override :rubygems, :version => '2.6.14'
