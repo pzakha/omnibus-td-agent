@@ -3,7 +3,7 @@ GIT
   revision: 00c81e99278b7d715f39968e72eb96c3c948f015
   specs:
     omnibus-software (4.0.0)
-      chef-sugar (>= 3.4.0)
+      chef-sugar-ng (>= 3.4.0)
       omnibus (>= 5.6.1)
 
 GIT
@@ -12,7 +12,7 @@ GIT
   specs:
     omnibus (6.0.19)
       aws-sdk-s3 (~> 1)
-      chef-sugar (>= 3.3)
+      chef-sugar-ng (>= 3.3)
       cleanroom (~> 1.0)
       ffi-yajl (~> 2.2)
       license_scout (~> 1.0)
@@ -110,7 +110,7 @@ GEM
       mixlib-config (~> 2.0)
       mixlib-shellout (~> 2.0)
       tomlrb (~> 1.2)
-    chef-sugar (5.0.0)
+    chef-sugar-ng (5.0.4)
     chef-zero (13.1.0)
       ffi-yajl (~> 2.2)
       hashie (>= 2.0, < 4.0)
